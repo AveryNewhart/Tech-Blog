@@ -1,0 +1,18 @@
+{{#each allCurrentBlogs}}
+<div class="cur-blog">
+  <div class="cur-blog-head">
+    <div class="cur-blog-title"> 
+      <h2>Title: {{blog_title}}</h2>
+    </div>
+    <div class="cur-blog-username">
+      <p class="cur-blog-user">Posted by: {{user.username}}</p>
+      <p>Created on: {{format_date}}</p>
+    </div>
+  </div>
+  <div class="cur-blog-message">
+    <p class="cur-blog-mes">
+      {{blog_message}}
+    </p>
+  </div>
+</div>
+{{/each}}
