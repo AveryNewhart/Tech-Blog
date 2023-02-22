@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blogs } = require('../../models'); //getting Blogs from blogPost model
+const { Blogs } = require('../../model'); //getting Blogs from blogPost model
 const userAuth = require('../../utils/auth');
 
 router.post('/', userAuth, async (req, res) => {

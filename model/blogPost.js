@@ -35,4 +35,4 @@ Blogs.init(
   }
 );
 
-module.exports = blogPost
+module.exports = Blogs
