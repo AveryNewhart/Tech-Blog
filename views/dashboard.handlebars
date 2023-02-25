@@ -1,20 +1,14 @@
-<div class="welcome-user">
-    <div class="center">
-        <h2>Welcome, {{username}}</h2>
-    </div>
-</div> 
-
 <div class="users-blog-posts">
-    <div class="user-posts-head">
-        <h3>{{username}}, here are your current blogs:</h3>
+    <div class="nbh">
+        <h3>Welcome {{username}}, here are your current blogs:</h3>
     </div>
     {{#if blogs.length}}
-<div>
+<div class="new-blog">
     {{#each blogs as |blog|}}
         <div class="holding-user-blogs">
             <div class="user-clog-content">
-                <h2>{{blog.blog_title}}</h2>
-                <p>{{blog.blog_message}}</p>
+                <h3>{{blog.blog_title}}</h3>
+                <p>{{blog.blog_content}}</p>
             </div>
         </div>
         {{/each}}
@@ -23,14 +17,14 @@
 </div>
 
 <div class="new-user-blog">
-    <div class="new-blog-head">
+    <div class="page-title nbh">
         <h4>Create New Blog</h4>
     </div>
-    <form class="form new-blog">
+    <form class="new-blog">
       <div class="form-group">
         <label for="project-name">Blog Title:</label>
         <input
-          class="form-input"
+          class="form-input-d"
           type="text"
           id="blog-title"
           name="blog-title"
@@ -39,7 +33,7 @@
       <div class="form-group">
         <label for="project-desc">Blog Content:</label>
         <textarea
-          class="form-input"
+          class="form-input-d"
           id="blog-content"
           name="blog-content"
         ></textarea>

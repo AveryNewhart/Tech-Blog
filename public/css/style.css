@@ -1,1 +1,79 @@
-/* ? */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("mod14bg.jpg");
+}
+
+.nav-links {
+ display: inline-block;
+ padding: .5em;
+ color: black;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: black;
+}
+
+.login-main-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-card {
+    display: flex;
+    justify-content: center;
+    padding: 18%;
+}
+
+.form {
+    margin-left: 5%;
+}
+
+.page-title {
+    text-decoration: underline;
+}
+
+.users-blog-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-user-blog {
+    display: flex;
+    margin-top: 15%;
+    border-top: 1px solid black;
+    flex-direction: column;
+}
+
+.new-blog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-input-d {
+    display: flex;
+    justify-content: center;
+}
+
+.nbh {
+    font-size: 200%;
+    text-align: center;
+}
+
+.hp-g {
+    background-color: white;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 1%;
+}

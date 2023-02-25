@@ -24,6 +24,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+// the login page
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) { // using session id to see if logged in so the user can be redirected to the dashboard
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('login');
+});
+
 // The dashboard page, getting users data based off their login info.
 router.get('/dashboard', userAuth, async (req, res) => {
     try {
@@ -32,7 +42,6 @@ router.get('/dashboard', userAuth, async (req, res) => {
         include: [{ model: Blogs }],
       });
       const users = userData.get({ plain: true });
-      console.log(users)
       res.render('dashboard', { // rendering/sending all content(if any) to the dashboard page.
         ...users,
         logged_in: true
@@ -41,16 +50,6 @@ router.get('/dashboard', userAuth, async (req, res) => {
       res.status(500).json(err);
       console.log(err)
     }
-  });
-
-  // the login page
-  router.get('/login', (req, res) => {
-    if (req.session.logged_in) { // using session id to see if logged in so the user can be redirected to the dashboard
-      res.redirect('/dashboard');
-      return;
-    }
-  
-    res.render('login');
   });
   
   module.exports = router;
