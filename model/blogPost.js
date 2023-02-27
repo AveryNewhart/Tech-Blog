@@ -19,6 +19,11 @@ Blogs.init(
       type: DataTypes.STRING(2000),
       allowNull: false,
     },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     blog_creator: {
         type: DataTypes.INTEGER,
         references: {

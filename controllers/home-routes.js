@@ -41,9 +41,11 @@ router.get('/dashboard', userAuth, async (req, res) => {
         attributes: { exclude: ['password'] }, // excluding the password so nobody can see it.
         include: [{ model: Blogs }],
       });
-      const users = userData.get({ plain: true });
+
+      const user = userData.get({ plain: true });
+      
       res.render('dashboard', { // rendering/sending all content(if any) to the dashboard page.
-        ...users,
+        ...user,
         logged_in: true
       });
     } catch (err) {
