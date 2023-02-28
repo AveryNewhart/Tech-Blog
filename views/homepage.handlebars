@@ -1,4 +1,4 @@
-{{#each allCurBlogs}}
+{{#each allCurBlogs as |curblog|}}
 <div class="users-blog-posts new-blog hp-g">
   <div class="cur-blog-head">
     <div class="cur-blog-title"> 
@@ -6,7 +6,7 @@
     </div>
     <div class="cur-blog-username">
       <p class="cur-blog-user">Posted by: {{user.username}}</p>
-      <p>Created on: {{format_date}}</p>
+      <p>Created on: {{format_date date_created}}</p>
     </div>
   </div>
   <div class="cur-blog-message">
