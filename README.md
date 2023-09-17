@@ -17,7 +17,7 @@
   - Clone the repo, run npm i, setup your .env, and run npm start.
 
   ## Usage
-  - https://my-tech-blog-888.herokuapp.com/
+  - (Heroku site no longer active, to use locally, refer to installation)
   ![screenshot of website](./public/css/techblogpic.png)
 
   ## License
